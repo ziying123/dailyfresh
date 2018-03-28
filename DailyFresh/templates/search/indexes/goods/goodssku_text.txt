@@ -1,0 +1,4 @@
+{{ object.name }}
+{{ object.desc }}
+{{ object.goods.detail }}
+
