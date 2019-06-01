@@ -38,7 +38,7 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'tinymce',  # 富文本编辑器
-    'haystack',  # 全文检索框架
+    # 'haystack',  # 全文检索框架
     'user',  # 用户模块
     'goods',  # 商品模块
     'cart',  # 购物车模块
@@ -86,7 +86,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'dailyfresh',
         'USER': 'root',
-        'PASSWORD': 'mysql',
+        'PASSWORD': 'wang941104',
         'HOST': 'localhost',
         'PORT': '3306',
     }
@@ -163,17 +163,17 @@ DEFAULT_FILE_STORAGE = 'utils.fdfs.storage.FDFSStorage'
 FDFS_CLIENT_CONF = './utils/fdfs/client.conf'
 
 # 指定fdstdfs服务器nginx的url地址
-FDFS_NGINX_URL = 'http://192.168.245.139:8888/'
+FDFS_NGINX_URL = 'http://192.168.0.102:8888/'
 
 # 全文搜索引擎
-HAYSTACK_CONNECTIONS = {
-    'default': {
-        # 使用whoosh引擎
-        'ENGINE': 'haystack.backends.whoosh_cn_backend.WhooshEngine',
-        # 索引文件路径
-        'PATH': os.path.join(BASE_DIR, 'whoosh_index'),
-    }
-}
+# HAYSTACK_CONNECTIONS = {
+#   'default': {
+#       # 使用whoosh引擎
+#       'ENGINE': 'haystack.backends.whoosh_cn_backend.WhooshEngine',
+#       # 索引文件路径
+#       'PATH': os.path.join(BASE_DIR, 'whoosh_index'),
+#   }
+# }
 
 # 当添加、修改、删除数据时，自动生成索引
-HAYSTACK_SIGNAL_PROCESSOR = 'haystack.signals.RealtimeSignalProcessor'
+# HAYSTACK_SIGNAL_PROCESSOR = 'haystack.signals.RealtimeSignalProcessor'
