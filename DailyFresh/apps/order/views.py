@@ -17,13 +17,13 @@ import os
 
 
 # Create your views here.
-a = 123
+
 
 # /order/place
 class OrderPlaceView(LoginRequiredMixin, View):
     '''提交订单页面显示'''
 
-    def post(self, request):
+    def post(self, request, aa):
         '''显示'''
         # 获取参数
         sku_ids = request.POST.getlist('sku_ids')  # [2,5] # 2,5
