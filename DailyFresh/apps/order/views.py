@@ -17,7 +17,7 @@ import os
 
 
 # Create your views here.
-
+a = 123
 
 # /order/place
 class OrderPlaceView(LoginRequiredMixin, View):
