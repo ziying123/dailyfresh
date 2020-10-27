@@ -23,7 +23,7 @@ import os
 class OrderPlaceView(LoginRequiredMixin, View):
     '''提交订单页面显示'''
 
-    def post(self, request, aa):
+    def post(self, request):
         '''显示'''
         # 获取参数
         sku_ids = request.POST.getlist('sku_ids')  # [2,5] # 2,5
@@ -80,6 +80,8 @@ class OrderPlaceView(LoginRequiredMixin, View):
         # 测试 git 1233
         # 测试 git 1233
         # 测试 git 1233
+        # 使用模板
+        # ceshi121323
         # 使用模板
         return render(request, 'place_order.html', context)
 
