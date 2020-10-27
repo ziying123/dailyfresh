@@ -77,11 +77,6 @@ class OrderPlaceView(LoginRequiredMixin, View):
                    'total_pay': total_pay,
                    'sku_ids': sku_ids}
 
-        # 测试 git 1233
-        # 测试 git 1233
-        # 测试 git 1233
-        # 使用模板
-        # ceshi121323
         # 使用模板
         return render(request, 'place_order.html', context)
 
